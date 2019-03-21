@@ -11,7 +11,7 @@ export class BookPage extends Component {
   componentDidMount() {
     console.log("A111111111111111111111"+this.props.match.params.id);   console.log(this);
     console.log("aaaaaaaaaaa"+this.props.match.params.title);  
-     axios.get(`/wp-json/wp/v2/books/${this.props.match.params.id}`)    //  参数id匹配的
+     axios.get(`https://nortourunited.com/trailshop/wp-json/wp/v2/books/${this.props.match.params.id}`)    //  参数id匹配的
     .then(
  
       res=>{

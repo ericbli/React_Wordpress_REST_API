@@ -7,7 +7,7 @@ export class Books extends Component {
         isLoaded: false
     }
 componentDidMount() {
-    axios.get('/wp-json/wp/v2/books')
+    axios.get('https://nortourunited.com/trailshop/wp-json/wp/v2/books')
         .then(res=>this.setState({
             books:res.data,
             isLoaded:true

@@ -17,8 +17,8 @@ export class BookItem extends Component {
 componentDidMount(){
     const { featured_media, author }=this.props.book;
 
-    const getImagUrl= axios.get(`/wp-json/wp/v2/media/${featured_media}`);
-    const getAuthor=axios.get(`/wp-json/wp/v2/users/${author}`);
+    const getImagUrl= axios.get(`https://nortourunited.com/trailshop/wp-json/wp/v2/media/${featured_media}`);
+    const getAuthor=axios.get(`https://nortourunited.com/trailshop/wp-json/wp/v2/users/${author}`);
      Promise.all([getImagUrl,getAuthor]).then(res=>{
     //    console.log(res);
        this.setState({
