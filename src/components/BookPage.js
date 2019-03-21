@@ -24,17 +24,21 @@ export class BookPage extends Component {
     .catch(err=>console.log(err));
   }
   render() {
+    
     const{book, isLoaded}=this.state;   console.log("oooooooooooooooo"+this);
     if(isLoaded){
       console.log(book); console.log("BBBBBBBBBBBBBBBBBBBB");
       console.log(isLoaded); console.log("ccccccccccccccccc");
     return (
+     
       <Fragment>
         <Link to='/'>Go Back</Link>
         <hr/>
         <h2 style={{marginBottom:'0'}}>{book.title.rendered}</h2>     {/* 大括号提取参数 */}
         <div dangerouslySetInnerHTML={{__html: book.content.rendered}}></div>
-        <h4>Publisher:{book.acf.publisher}</h4>
+        <h4>Price:{book.acf.price} USD </h4>
+       
+        <img style={{with:'60%'}} src={book.acf.imgurl} alt="New Products"></img>
       </Fragment>
     )
   }
